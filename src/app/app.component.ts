@@ -17,7 +17,7 @@ export class AppComponent {
   agregarArticulo() {
     const articuloExist = this.existeArticulo(this.nombreInput);
 
-    if (this.cantidadInput == 0 && this.precioInput == 0) {
+    if (this.cantidadInput < 1 || this.precioInput < 1) {
       alert('Ingrese un valor correcto');
       return true;
     }
